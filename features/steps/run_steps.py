@@ -39,8 +39,7 @@ def create_project_from_config_file(context, starter_name):
             str(context.config_file),
             "--starter",
             context.starters_paths[starter_name],
-        ],
-        cwd=context.temp_dir
+        ]
     )
     assert res.returncode == OK_EXIT_CODE
     # prevent telemetry from prompting for input during e2e tests
