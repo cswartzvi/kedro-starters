@@ -22,7 +22,7 @@ commands:
       - run:
           name: Install Python dependencies
           command: pip install -r test_requirements.txt -U
-            
+
       - run:
           name: Echo package versions
           command: |
@@ -39,7 +39,7 @@ commands:
       - checkout
       - run:
           name: Install pip setuptools
-          command: python -m pip install -U "pip>=21.2" "setuptools>=38.0" wheel
+          command: python -m pip install -U "pip>=21.2" "setuptools>=65.5.1" wheel
       - run:
           name: Install test requirements
           command: sudo pip install -r test_requirements.txt
@@ -91,7 +91,7 @@ commands:
           name: Install pip setuptools
           command: |
             conda activate kedro-starters
-            python -m pip install -U "pip>=21.2" "setuptools>=38.0" wheel
+            python -m pip install -U "pip>=21.2" "setuptools>=65.5.1" wheel
       - run:
           name: Install test requirements
           command: |
@@ -117,7 +117,7 @@ commands:
     steps:
       - run:
           command: |
-            conda activate kedro-starters 
+            conda activate kedro-starters
             behave features/run.feature
 
   win_e2e_lint:
@@ -125,7 +125,7 @@ commands:
     steps:
       - run:
           command: |
-            conda activate kedro-starters 
+            conda activate kedro-starters
             behave features/lint.feature
 
 jobs:
