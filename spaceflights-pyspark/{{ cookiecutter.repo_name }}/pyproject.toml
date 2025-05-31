@@ -24,7 +24,7 @@ dependencies = [
 
 [project.entry-points."kedro.hooks"]
 
-[project.optional-dependencies]
+[dependency-groups]
 docs = [
     "docutils<0.21",
     "sphinx>=5.3,<7.3",
